@@ -1,5 +1,7 @@
 window.onload = function(){
-  var listItems = $( 'li' );
+  var $listItems = $( 'li' );
+  var $ul = $('ul');
+
   var a = [1, 2, 3, 5, 8, 7];
   var b = [4, 6, 9];
   var colorClasses = [
@@ -10,33 +12,38 @@ window.onload = function(){
     'red',
   ];
 
-  var count = 0;
-  ApplyExtras();
-  var tid = setTimeout(shine, 1000);
-
-  function ApplyExtras() {
-    for (var i = 0; i < b.length; i++) {
-      applyEffect(listItems.eq(b[i]));
+  animate();
+  var mouseIn = false;
+  $ul.on('mouseenter', function(){
+    mouseIn = true;
+    for (var i = $listItems.length - 1; i >= 0; i--) {
+      $listItems.eq(i).removeClass('push');
     };
-  }
+  })
+
+  $ul.on('mouseleave', function(){
+    mouseIn = false;
+    count = 0;
+  })
 
   function applyEffect(element){
-    element.hasClass('push')?
-    element.removeClass('push'):
-    element.addClass('push');
+    if (!mouseIn) {
+      element.hasClass('push')?
+      element.removeClass('push'):
+      element.addClass('push');
+    }
   }
 
-  function shine() {
-    applyEffect(listItems.eq(a[count]))
+  var count = 0;
+  function animate() {
+    var element = $listItems.eq(a[count]);
+    applyEffect(element);
 
     count = ++count % a.length;
-
     if (count == 0) {
-      applyEffect(listItems.eq(0));
-      ApplyExtras();
+      applyEffect($listItems.eq(0));
     }
 
-    clearTimeout(tid);
-    tid = setTimeout(shine, 2000);
+    setTimeout(animate, 1000);
   }
 };
