@@ -1,4 +1,4 @@
-*, *:before, *:after {
+*, *:before, *:after{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -9,12 +9,12 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-ul, li {
+ul, li{
   list-style: none outside none;
   display: inline-block;
 }
 
-li {
+li{
   padding: 24px 20px;
   margin-bottom: 4px;
   border-radius: 5px;
@@ -24,18 +24,18 @@ li {
   -ms-transition: all 1s linear;
   -kthtml-transition: all 1s linear;
   transition: all 1s linear;
-  -moz-box-shadow:    inset 0 0 100px #000000;
-  -webkit-box-shadow: inset 0 0 100px #000000;
-  box-shadow:         inset 0 0 100px #000000;
+  -moz-box-shadow:    inset 0 0 50px #000000;
+  -webkit-box-shadow: inset 0 0 50px #000000;
+  box-shadow:         inset 0 0 50px #000000;
 }
 
-a {
+a{
   text-decoration: none;
   font-size: 30px;
   color: inherit;
 }
 
-.push, li:hover {
+.push, li:hover{
   -moz-box-shadow:    inset 0 0 7px #000000;
   -webkit-box-shadow: inset 0 0 7px #000000;
   box-shadow:         inset 0 0 7px #000000;
@@ -47,16 +47,16 @@ a {
   transition: all 0s linear;
 }
 
-.me {
+.me{
   margin: auto;
   width: 27%;
 }
 
-.empty,.name {
+.empty,.name{
   box-shadow: none;
 }
 
-.name {
+.name{
   width: 244px;
   text-align: center;
   font-size: 22px;
@@ -92,4 +92,24 @@ li.purple{
 li.orange{
   background-color:#F49A74;
   color:#DF6C1F;
+}
+
+li.ohloh{
+  color: #575757;
+  background-color: #F49A74;
+}
+
+li.linkedin{
+  color: #1D87BD;
+  background-color: #FFFFFF;
+}
+
+li.skype{
+  color: #FFFFFF;
+  background-color: #009EE5;
+}
+
+li.mail{
+  color: #E3E3E3;
+  background-color: #5F5F5F;
 }

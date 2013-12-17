@@ -1,18 +1,8 @@
 window.onload = function(){
+  var a = [1, 2, 3, 5, 8, 7];
   var $listItems = $( 'li' );
   var $ul = $('ul');
 
-  var a = [1, 2, 3, 5, 8, 7];
-  var b = [4, 6, 9];
-  var colorClasses = [
-    'blue',
-    'green',
-    'orange',
-    'purple',
-    'red',
-  ];
-
-  animate();
   var mouseIn = false;
   $ul.on('mouseenter', function(){
     mouseIn = true;
@@ -23,7 +13,6 @@ window.onload = function(){
 
   $ul.on('mouseleave', function(){
     mouseIn = false;
-    count = 0;
   })
 
   function applyEffect(element){
@@ -46,4 +35,6 @@ window.onload = function(){
 
     setTimeout(animate, 1000);
   }
+
+  animate();
 };
