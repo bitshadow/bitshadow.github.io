@@ -36,9 +36,9 @@ a{
 }
 
 .push, li:hover{
-  -moz-box-shadow:    inset 0 0 7px #000000;
-  -webkit-box-shadow: inset 0 0 7px #000000;
-  box-shadow:         inset 0 0 7px #000000;
+  -moz-box-shadow:    inset 0 0 0px #000000;
+  -webkit-box-shadow: inset 0 0 0px #000000;
+  box-shadow:         inset 0 0 0px #000000;
   -webkit-transition: all 0s linear;
   -o-transition: all 0s linear;
   -moz-transition: all 0s linear;
