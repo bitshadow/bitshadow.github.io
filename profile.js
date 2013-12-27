@@ -1,4 +1,4 @@
-window.onload = function(){
+$(document).ready(function(){
   var a = [1, 2, 3, 5, 8, 7];
   var $listItems = $( 'li' );
   var $ul = $('ul');
@@ -37,4 +37,4 @@ window.onload = function(){
   }
 
   animate();
-};
+});
