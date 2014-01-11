@@ -2,6 +2,8 @@ $(document).ready(function(){
   var a = [1, 2, 3, 5, 8, 7];
   var $listItems = $( 'li' );
   var $ul = $('ul');
+  var tid = null;
+  var delay = 5000;  // 5 sec
 
   var mouseIn = false;
   $ul.on('mouseenter', function(){
@@ -13,6 +15,11 @@ $(document).ready(function(){
 
   $ul.on('mouseleave', function(){
     mouseIn = false;
+    if (tid) {
+      clearTimeout(tid);
+    }
+
+    setTimeout(animate, delay);
   })
 
   function applyEffect(element){
@@ -23,17 +30,14 @@ $(document).ready(function(){
     }
   }
 
-  var count = 0;
   function animate() {
-    var element = $listItems.eq(a[count]);
-    applyEffect(element);
-
-    count = ++count % a.length;
-    if (count == 0) {
-      applyEffect($listItems.eq(0));
+    if (tid) {
+      a.forEach(function(el){
+        applyEffect($listItems.eq(el));
+      })
     }
 
-    setTimeout(animate, 1000);
+    tid = setTimeout(animate, delay);
   }
 
   animate();
