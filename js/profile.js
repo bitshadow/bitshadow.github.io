@@ -31,14 +31,16 @@ $(document).ready(function(){
   }
 
   function animate() {
-    if (tid) {
-      a.forEach(function(el){
-        applyEffect($listItems.eq(el));
-      })
-    }
-
+    J();
     tid = setTimeout(animate, delay);
   }
 
+  function J(){
+    a.forEach(function(el){
+      applyEffect($listItems.eq(el));
+    });
+  }
+  
+  J();
   animate();
 });
