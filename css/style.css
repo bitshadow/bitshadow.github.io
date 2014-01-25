@@ -30,13 +30,19 @@ li{
   box-shadow:         inset 0 0 40px #000;
 }
 
+.blur {
+  -moz-box-shadow:    inset 0 0 90px #000;
+  -webkit-box-shadow: inset 0 0 90px #000;
+  box-shadow:         inset 0 0 90px #000;
+}
+
 a{
   text-decoration: none;
   font-size: 30px;
   color: inherit;
 }
 
-.push, li:hover{
+.highlight, li:hover{
   -moz-box-shadow:    inset 0 0 0px #000;
   -webkit-box-shadow: inset 0 0 0px #000;
   box-shadow:         inset 0 0 0px #000;

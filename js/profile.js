@@ -1,5 +1,6 @@
 $(document).ready(function(){
   var a = [1, 2, 3, 5, 8, 7];
+  var b = [4, 6, 9];
   var $listItems = $( 'li' );
   var $ul = $('ul');
   var tid = null;
@@ -9,7 +10,7 @@ $(document).ready(function(){
   $ul.on('mouseenter', function(){
     mouseIn = true;
     for (var i = $listItems.length - 1; i >= 0; i--) {
-      $listItems.eq(i).removeClass('push');
+      $listItems.eq(i).removeClass('highlight');
     };
   })
 
@@ -22,11 +23,11 @@ $(document).ready(function(){
     setTimeout(animate, delay);
   })
 
-  function applyEffect(element){
+  function applyEffect(element, style){
     if (!mouseIn) {
-      element.hasClass('push')?
-      element.removeClass('push'):
-      element.addClass('push');
+      element.hasClass(style)?
+      element.removeClass(style):
+      element.addClass(style);
     }
   }
 
@@ -37,10 +38,14 @@ $(document).ready(function(){
 
   function J(){
     a.forEach(function(el){
-      applyEffect($listItems.eq(el));
+      applyEffect($listItems.eq(el), 'highlight');
     });
+
+    b.forEach(function(el){
+      applyEffect($listItems.eq(el), 'blur');
+    })
   }
-  
+
   J();
   animate();
 });
