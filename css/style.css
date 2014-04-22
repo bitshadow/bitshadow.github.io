@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #222;
+  background: url('../img/bg.png');
   font-family: Arial, Helvetica, sans-serif;
   min-height: 98%;
 }
