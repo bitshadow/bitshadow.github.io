@@ -16,4 +16,4 @@ results
 
 cluster_pidfile
 *.orig
-
+*.git

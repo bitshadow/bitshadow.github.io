@@ -5,29 +5,34 @@
 }
 
 body{
-  background: url('../img/bg.png');
+  background: url('../img/bg.jpg');
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 98%;
+  margin: 0 auto;
+  width: 380px;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
 }
 
 ul, li{
   list-style: none outside none;
-  display: inline-block;
 }
 
 li{
-  padding: 24px 20px;
+  padding: 24px 0px;
   margin-bottom: 4px;
   border-radius: 5px;
-  -webkit-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -ms-transition: all 1s linear;
-  -kthtml-transition: all 1s linear;
-  transition: all 1s linear;
-  -moz-box-shadow:    inset 0 0 40px #000;
-  -webkit-box-shadow: inset 0 0 40px #000;
-  box-shadow:         inset 0 0 40px #000;
+  -moz-box-shadow:    inset 0 0 0px #000;
+  -webkit-box-shadow: inset 0 0 0px #000;
+  box-shadow:         inset 0 0 0px #000;
+  -webkit-transition: all 0s linear;
+  -o-transition: all 0s linear;
+  -moz-transition: all 0s linear;
+  -ms-transition: all 0s linear;
+  -kthtml-transition: all 0s linear;
+  transition: all 0s linear;
 }
 
 .blur {
@@ -42,81 +47,18 @@ a{
   color: inherit;
 }
 
-.highlight, li:hover{
-  -moz-box-shadow:    inset 0 0 0px #000;
-  -webkit-box-shadow: inset 0 0 0px #000;
-  box-shadow:         inset 0 0 0px #000;
-  -webkit-transition: all 0s linear;
-  -o-transition: all 0s linear;
-  -moz-transition: all 0s linear;
-  -ms-transition: all 0s linear;
-  -kthtml-transition: all 0s linear;
-  transition: all 0s linear;
+li:hover{
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -kthtml-transition: all 1s linear;
+  transition: all 1s linear;
+  -moz-box-shadow:    inset 0 0 40px #000;
+  -webkit-box-shadow: inset 0 0 40px #000;
+  box-shadow:         inset 0 0 40px #000;
 }
 
-.me{
-  margin: auto;
-  width: 325px;
-}
-
-.empty,.name{
-  box-shadow: none;
-}
-
-.name{
-  width: 244px;
-  text-align: center;
-  font-size: 22px;
-  font-family: 'Iceland', sans-serif;
-  color: #eee;
-}
-
-li.green{
-  background-color:#00c08b;
-  color:#127a5d;
-}
-
-li.red{
-  background-color:#ea5080;
-  color:#aa2a52;
-}
-
-li.blue{
-  background-color:#53bfe2;
-  color:#2884a2;
-}
-
-li.yellow{
-  background-color:#f8c54d;
-  color:#ab8426;
-}
-
-li.purple{
-  background-color:#df6dc2;
-  color:#9f3c85;
-}
-
-li.orange{
-  background-color:#F49A74;
-  color:#DF6C1F;
-}
-
-li.ohloh{
-  color: #575757;
-  background-color: #F49A74;
-}
-
-li.linkedin{
-  color: #1D87BD;
-  background-color: #FFFFFF;
-}
-
-li.skype{
-  color: #FFFFFF;
-  background-color: #009EE5;
-}
-
-li.mail{
-  color: #E3E3E3;
-  background-color: #5F5F5F;
+header {
+  margin: 75px 0 0;
 }
