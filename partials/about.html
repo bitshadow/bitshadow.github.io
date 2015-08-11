@@ -1,0 +1,15 @@
+<div class="about">
+    <div class="info about--info">
+        I live in <span class="highlight">Bangalore</span>, work at
+        <a href="{{work.url}}" target="new">{{work.name}}</a> and contribute to <a ui-sref="projects">Open Source.</a>
+    </div>
+
+    <div class="contacts about--contacts">
+        <small>Get in touch. I come here often.</small>
+        <div class="icons contacts--icons">
+            <a ng-repeat="contact in contacts" class="{{contact.type}}" href="{{contact.url}}" target="new">
+                <i class="fa fa-2x {{contact.icon}}"></i>
+            </a>
+        </div>
+    </div>
+</div>
