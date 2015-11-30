@@ -27,6 +27,10 @@ a {
     color: #10CDC1;
 }
 
+.info a, .icons a, .projects a {
+    text-decoration: none;
+}
+
 .info a {
     color: rgba(0, 0, 0, 0.54);
     font-weight: bold;
@@ -91,7 +95,6 @@ a {
 
 .icons a {
     margin: 0 10px;
-    text-decoration: none;
 }
 
 .twitter:hover {
