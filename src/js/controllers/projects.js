@@ -10,7 +10,7 @@ angular.module('App.controllers')
                 url: 'http://bitshadow.github.io/slate/'
             }, {
                 key: 'Organizations',
-                url: 'http://openorgs.herokuapp.com/'
+                url: 'https://github.com/bitshadow/organizations'
             }, {
                 key: 'Scrollpad',
                 url: 'https://github.com/bitshadow/ScrollPad'
