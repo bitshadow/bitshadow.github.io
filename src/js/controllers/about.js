@@ -21,8 +21,8 @@ angular.module('App.controllers')
             }];
 
             var work = {
-                name: 'InMobi',
-                url: 'https://www.inmobi.com'
+                name: 'Yelp',
+                url: 'https://www.yelp.com'
             }
 
             $scope.work = work;
