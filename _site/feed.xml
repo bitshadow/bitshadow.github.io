@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-03T10:40:38+02:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">How to build KDE Calligra Words?</title><link href="http://localhost:4000/jekyll/update/2011/03/11/how-to-build-calligra-words.html" rel="alternate" type="text/html" title="How to build KDE Calligra Words?" /><published>2011-03-11T17:16:15+01:00</published><updated>2011-03-11T17:16:15+01:00</updated><id>http://localhost:4000/jekyll/update/2011/03/11/how-to-build-calligra-words</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2011/03/11/how-to-build-calligra-words.html">&lt;p&gt;After long frustration with system crashes and configurations I finally managed to compile calligra. So I decided to put it down on the node and here is the short and fast tutorial to compile calligra so that you don’t waste much of your precious time to relearn it again.&lt;/p&gt;
+
+&lt;p&gt;First of all remove already existing calligra/koffice files and libraries from package manager. It will conflict with calligra you are going to compile and result in the crash. You will have hard time to figure out why its happening.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-make-three-directories&quot;&gt;1. Make three directories&lt;/h2&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mkdir &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/src/
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mkdir &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/build/calligra
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mkdir &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/inst
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;2-get-the-source-code&quot;&gt;2. Get the source code&lt;/h2&gt;
+
+&lt;p&gt;To get the source code you will need to install git.Next you have to specify the location from where will get the source code. Copy paste below code in ~/.gitconfig file and replace “Your Name” with your name and same with email.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;url &lt;span class=&quot;s2&quot;&gt;&quot;git@git.kde.org:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  pushInsteadOf &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; git://anongit.kde.org/
+  pushInsteadOf &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; git://git.kde.org/
+  pushInsteadOf &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; kde:
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;url &lt;span class=&quot;s2&quot;&gt;&quot;git://anongit.kde.org/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  insteadOf &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; kde:
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;user]
+  name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Your Name
+  email &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Your Email
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;push]
+  &lt;span class=&quot;nv&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tracking
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/src/
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo git clone kde:calligra
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Grab a cup of Coffee. Depending on your internet speed it will take some time to fetch approx data of 450 mb.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-install-below-dependencies-to-compile&quot;&gt;3. Install below dependencies to compile&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;qt&lt;/li&gt;
+  &lt;li&gt;kdelibs&lt;/li&gt;
+  &lt;li&gt;kdebase/runtime&lt;/li&gt;
+  &lt;li&gt;kdepimlibs&lt;/li&gt;
+  &lt;li&gt;cmake&lt;/li&gt;
+  &lt;li&gt;sqlite&lt;/li&gt;
+  &lt;li&gt;lcms&lt;/li&gt;
+  &lt;li&gt;blah..blah..blah..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In short type below command in terminal to get the dependencies installed in your system.&lt;/p&gt;
+
+&lt;h3 id=&quot;in-deb-based-distributionsdebian-ubuntu&quot;&gt;In deb-based Distributions(Debian, Ubuntu…):&lt;/h3&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; apt-get build-dep calligra
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;opensuse&quot;&gt;OpenSuSE:&lt;/h3&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;zypper si -d calligra
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fedora&quot;&gt;Fedora:&lt;/h3&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;yum-builddep calligra
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;4-compile-and-install&quot;&gt;4. Compile and Install:&lt;/h2&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mkdir -p &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/build/calligra
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mkdir -p &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/inst
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/build/calligra
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;cmake -DCMAKE_INSTALL_PREFIX&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/inst &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/src/calligra -DCMAKE_BUILD_TYPE&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;RelWithDebInfo
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;make -j4
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;make install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;5-export-library-paths&quot;&gt;5. Export library paths&lt;/h2&gt;
+&lt;p&gt;Put this lines inside ~/.bashrc so you won’t have to type it again and again to run application.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;KDEDIRS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$KDEDIRS&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/inst
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/inst/bin
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;KDEHOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/kde/.kde
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;kbuildsycoca4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;6-run-calligrawords&quot;&gt;6. Run Calligrawords&lt;/h2&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$calligrawords&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Happy Hacking!! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">After long frustration with system crashes and configurations I finally managed to compile calligra. So I decided to put it down on the node and here is the short and fast tutorial to compile calligra so that you don’t waste much of your precious time to relearn it again.</summary></entry></feed>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to build KDE Calligra Words?</title>
+  <meta name="description" content="After long frustration with system crashes and configurations I finally managed to compile calligra. So I decided to put it down on the node and here is the ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2011/03/11/how-to-build-calligra-words.html">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="/feed.xml">
+  <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+  <!-- <link rel='dns-prefetch' href='//code.jquery.com' /> -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Raleway:300,400,500,700|Open+Sans:400,700" rel="stylesheet" type="text/css"> -->
+  <link href="/favicon.ico" rel="icon" type="image/x-icon">
+
+  
+</head>
+
+
+  <body>
+
+    <div class="page-content" aria-label="Content">
+      <header class="site-header" role="banner">
+    <div class="container">
+        <div class="site-header_logo-container">
+            <object>
+                <embed src="/images/jk.svg">
+            </object>
+        </div>
+        <!-- <div class="site-header_logo-container"> -->
+            <!-- JK -->
+            <!-- <div class="site-header_logo"></div> -->
+        <!-- </div> -->
+        <h3 class="site-header_title">Making complex simple</h3>
+        <nav class="site-header_nav">
+            <ul>
+                 
+                <li>
+                    <a class="page-link" href="/about/">About</a>
+                </li>
+                  
+                <li>
+                    <a class="page-link" href="/blog/">Blog</a>
+                </li>
+                  
+                <li>
+                    <a class="page-link" href="/projects/">Projects</a>
+                </li>
+                       
+            </ul>
+        </nav>
+        </nav>
+    </div>
+</header>
+
+
+      <div class="site-content">
+        <div class="container">
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to build KDE Calligra Words?</h1>
+    <p class="post-meta"><time datetime="2011-03-11T17:16:15+01:00" itemprop="datePublished">Mar 11, 2011</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>After long frustration with system crashes and configurations I finally managed to compile calligra. So I decided to put it down on the node and here is the short and fast tutorial to compile calligra so that you don’t waste much of your precious time to relearn it again.</p>
+
+<p>First of all remove already existing calligra/koffice files and libraries from package manager. It will conflict with calligra you are going to compile and result in the crash. You will have hard time to figure out why its happening.</p>
+
+<h2 id="1-make-three-directories">1. Make three directories</h2>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir <span class="nv">$HOME</span>/kde/src/
+<span class="gp">$ </span>mkdir <span class="nv">$HOME</span>/kde/build/calligra
+<span class="gp">$ </span>mkdir <span class="nv">$HOME</span>/kde/inst
+</code></pre>
+</div>
+
+<h2 id="2-get-the-source-code">2. Get the source code</h2>
+
+<p>To get the source code you will need to install git.Next you have to specify the location from where will get the source code. Copy paste below code in ~/.gitconfig file and replace “Your Name” with your name and same with email.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="o">[</span>url <span class="s2">"git@git.kde.org:"</span><span class="o">]</span>
+  pushInsteadOf <span class="o">=</span> git://anongit.kde.org/
+  pushInsteadOf <span class="o">=</span> git://git.kde.org/
+  pushInsteadOf <span class="o">=</span> kde:
+
+<span class="o">[</span>url <span class="s2">"git://anongit.kde.org/"</span><span class="o">]</span>
+  insteadOf <span class="o">=</span> kde:
+
+<span class="o">[</span>user]
+  name <span class="o">=</span> Your Name
+  email <span class="o">=</span> Your Email
+
+<span class="o">[</span>push]
+  <span class="nv">default</span><span class="o">=</span>tracking
+</code></pre>
+</div>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd</span> <span class="nv">$HOME</span>/kde/src/
+<span class="gp">$ </span>sudo git clone kde:calligra
+</code></pre>
+</div>
+<p>Grab a cup of Coffee. Depending on your internet speed it will take some time to fetch approx data of 450 mb.</p>
+
+<h2 id="3-install-below-dependencies-to-compile">3. Install below dependencies to compile</h2>
+<ul>
+  <li>qt</li>
+  <li>kdelibs</li>
+  <li>kdebase/runtime</li>
+  <li>kdepimlibs</li>
+  <li>cmake</li>
+  <li>sqlite</li>
+  <li>lcms</li>
+  <li>blah..blah..blah..</li>
+</ul>
+
+<p>In short type below command in terminal to get the dependencies installed in your system.</p>
+
+<h3 id="in-deb-based-distributionsdebian-ubuntu">In deb-based Distributions(Debian, Ubuntu…):</h3>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nv">$sudo</span> apt-get build-dep calligra
+</code></pre>
+</div>
+
+<h3 id="opensuse">OpenSuSE:</h3>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>zypper si -d calligra
+</code></pre>
+</div>
+
+<h3 id="fedora">Fedora:</h3>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>yum-builddep calligra
+</code></pre>
+</div>
+
+<h2 id="4-compile-and-install">4. Compile and Install:</h2>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir -p <span class="nv">$HOME</span>/kde/build/calligra
+<span class="gp">$ </span>mkdir -p <span class="nv">$HOME</span>/kde/inst
+<span class="gp">$ </span><span class="nb">cd</span> <span class="nv">$HOME</span>/kde/build/calligra
+<span class="gp">$ </span>cmake -DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="nv">$HOME</span>/kde/inst <span class="nv">$HOME</span>/kde/src/calligra -DCMAKE_BUILD_TYPE<span class="o">=</span>RelWithDebInfo
+<span class="gp">$ </span>make -j4
+<span class="gp">$ </span>make install
+</code></pre>
+</div>
+
+<h2 id="5-export-library-paths">5. Export library paths</h2>
+<p>Put this lines inside ~/.bashrc so you won’t have to type it again and again to run application.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">export </span><span class="nv">KDEDIRS</span><span class="o">=</span><span class="nv">$KDEDIRS</span>:<span class="nv">$HOME</span>/kde/inst
+<span class="gp">$ </span><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/kde/inst/bin
+<span class="gp">$ </span><span class="nb">export </span><span class="nv">KDEHOME</span><span class="o">=</span><span class="nv">$HOME</span>/kde/.kde
+<span class="gp">$ </span>kbuildsycoca4
+</code></pre>
+</div>
+<h2 id="6-run-calligrawords">6. Run Calligrawords</h2>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nv">$calligrawords</span>
+</code></pre>
+</div>
+
+<p>Happy Hacking!! :)</p>
+
+
+  </div>
+
+  
+</article>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="container">
+      <p class="site-footer_msg">Get in touch. I come here often.</p>
+      <div class="site-footer_icons">
+          <a href="https://github.com/bitshadow" target="_blank">
+              <i class="fa fa-2x fa-github-alt"></i>
+          </a>
+          <a href="https://twitter.com/bitshadow" target="_blank">
+              <i class="fa fa-2x fa-twitter"></i>
+          </a>
+          <a href="https://in.linkedin.com/pub/jignesh-kakadiya/3a/170/523" target="_blank">
+              <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+          <a href="https://medium.com/@bitshadow" target="_blank">
+              <i class="fa fa-2x fa-medium"></i>
+          </a>
+      </div>
+      <p class="site-footer_msg">Handmade by me © 2017.</p>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

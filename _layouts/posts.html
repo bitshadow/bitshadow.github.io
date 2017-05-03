@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="posts">
+
+  {{ content }}
+
+<article class="blog-post">
+    <h3 class="post_title">
+      <a class="post-link" href="https://medium.com/@bitshadow/how-basic-http-authentication-and-session-works-d29af9caec31">How does basic HTTP Authentication works?</a>
+    </h3>
+    <span class="post-meta">Apr 1, 2017</span>
+</article>
+
+{% for post in site.posts %}
+  <article class="blog-post">
+      <h3 class="post_title">
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </article>
+{% endfor %}
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+
+</div>

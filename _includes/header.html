@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+    <div class="container">
+        <div class="site-header_logo-container">
+            <object>
+                <embed src="/images/jk.svg">
+            </object>
+        </div>
+        <!-- <div class="site-header_logo-container"> -->
+            <!-- JK -->
+            <!-- <div class="site-header_logo"></div> -->
+        <!-- </div> -->
+        <h3 class="site-header_title">Making complex simple</h3>
+        <nav class="site-header_nav">
+            <ul>
+                {% for my_page in site.pages %} {% if my_page.title %}
+                <li>
+                    <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                </li>
+                {% endif %} {% endfor %}
+            </ul>
+        </nav>
+        </nav>
+    </div>
+</header>

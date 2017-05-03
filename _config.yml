@@ -1,0 +1,70 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+projects:
+- name: iconate
+  link: ./iconate
+  image: images/projects/iconate.png
+  desc: Transform your icons with trendy animations
+- name: slate
+  link: ./slate
+  desc: A text only meme generator
+  image: images/projects/slate.png
+- name: Scrollpad
+  link: https://github.com/bitshadow/ScrollPad
+  desc: Scroll long webpages easy way.
+  image: images/projects/scrollpad.png
+- name: Patch Viewer
+  link: https://github.com/bitshadow/PatchViewer
+  desc: Elegant diff displays in Linux terminals
+  image: images/projects/patchviewer.png
+
+opensource:
+- name: Mozilla Firefox
+  link: https://github.com/neonux/mozilla-all/commits/mozilla-central?author=bitshadow
+  image: images/projects/firefox.png
+  desc: An open standard browser we love
+- name: Yeoman app
+  link: https://github.com/yeoman/yeoman-app/commits/master?author=bitshadow
+  image: images/projects/yeoman.png
+  desc: A desktop app that scaffolds projects using Yeoman
+- name: Season of KDE 2012
+  link: https://cgit.kde.org/kdelibs.git/log/?h=Active%2FTwo&id=1fd3f0ff63e31309fab5c70db0fe6669a918f234&qt=author&q=jignesh #https://cgit.kde.org/calligra.git/commit/?id=44bf28f8aec3ab6071ec3c08e3dd80a70fa90d78
+  image: images/projects/kde.png
+  desc: Porting KDE frameworks from Qt4 to Qt5
+- name: React JS
+  link: ./react # https://facebook.github.io/react/acknowledgements.html
+  image: images/projects/react.png
+  desc: Fixing bugs in React.js

@@ -1,0 +1,2368 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
+    <link rel="stylesheet" href="assets/css/reveal.css">
+    <link rel="stylesheet" href="assets/css/new_theme.css">
+</head>
+
+<body>
+    <div class="theme-font-montserrat theme-color-black-blue" style="width: 100%; height: 100%;">
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 240px; left: 240px; top: 162px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                            <h1>React</h1>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 240px; top: 364px;">
+                        <div class="sl-block-content" style="z-index: 12; text-align: center;">
+                            <p>
+                                <a href="https://twitter.com/bitshadow" target="_blank">
+                                    <span style="color:#40E0D0">@bitshadow</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 160px; left: 480px; top: 153px;">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <h1>
+                                    <span style="color:#40E0D0">
+                                        <span style="font-size:1.2em">
+                                            <span style="font-size:1.4em">JS</span>
+                                        </span>
+                                    </span>
+                                </h1>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 184px; left: 256px; top: 259px;">
+                        <div class="sl-block-content" style="z-index: 14;">
+                            <p>By Facebook</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 874px; left: 3px; top: 451px;">
+                        <div class="sl-block-content" style="z-index: 15;">
+                            <p>
+                                <span style="font-size:0.7em">
+                                        <a href="https://facebook.github.io/react/acknowledgements.html" target="_blank">
+                                            <span style="color:#40E0D0">https://facebook.github.io/react/acknowledgements.html</span>
+                                </a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 89px; height: auto;">
+                        <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                            <h2>I will discuss about</h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 210px; height: auto;">
+                        <div class="sl-block-content fragment" style="text-align: left; z-index: 12;" data-fragment-index="0">
+                            <ul>
+                                <li>Components and JSX</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 280px;">
+                        <div class="sl-block-content fragment" style="z-index: 13; text-align: left;" data-fragment-index="1">
+                            <ul>
+                                <li>Virtual DOM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 350px;">
+                        <div class="sl-block-content fragment" style="z-index: 14; text-align: left;" data-fragment-index="2">
+                            <ul>
+                                <li>Flux</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 420px;">
+                        <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="3">Redux and&nbsp;hot loading</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 103px; height: auto;">
+                        <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                            <h2>React</h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 191px; height: auto;">
+                        <div class="sl-block-content" dir="ui" style="text-align: left; z-index: 12;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="0">
+                                    <span>UI library developed at Facebook</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 261px;">
+                        <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="1">
+                                    <span>Not yet another JS Framework</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;">
+                        <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="2">
+                                    <span>Allows us to create&nbsp;stateful reusable UI components</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 401px;">
+                        <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="3">
+                                    <p>
+                                        <span>Selectively re-render entire component on change&nbsp;</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 693px; left: 80px; top: 471px;">
+                        <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="4">
+                                    <span>Can be rendered on&nbsp;client and server both</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 541px;">
+                        <div class="sl-block-content" style="z-index: 17; text-align: left;">
+                            <ul>
+                                <li class="fragment" data-fragment-index="5">
+                                    <span>Two-way data binding</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 611px;">
+                        <div class="sl-block-content" style="z-index: 18; text-align: left;" dir="ui">
+                            <ul>
+                                <li class="fragment" data-fragment-index="6">
+                                    <span>Browser support back to IE8</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 113px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1>Components</h1>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 842px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 12; font-size: 109%;">
+                                <p style="text-align:center">
+                                    <span style="font-size:0.7em">
+                                            <span style="text-align:start">Simple functions that take in
+                                                <span style="color:#40E0D0">Props</span>&nbsp;and
+                                    <span style="color:#40E0D0">State</span>&nbsp;to render HTML.&nbsp;
+                                    </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 210px; height: auto;">
+                            <div class="sl-block-content fragment" style="z-index: 11; text-align: left;" data-fragment-index="0">
+                                <h3>Most SPA Frameworks</h3>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 240px; height: 280px; left: 80px; top: 298px;">
+                            <div class="sl-block-content fragment" data-shape-type="circle" data-shape-fill-color="rgb(208, 224, 227)" data-shape-stretch="false" style="z-index: 12; opacity: 0.36;" data-fragment-index="1">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 240 240">
+                                    <ellipse rx="120" ry="120" cx="120" cy="120" class="shape-element" fill="rgb(208, 224, 227)"></ellipse>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 160px; height: 65px; left: 400px; top: 405px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-right" data-shape-fill-color="rgb(159, 197, 232)" data-shape-stretch="true" style="z-index: 13;" data-fragment-index="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 160 65">
+                                    <polygon points="0,19.5 80,19.5 80,0 160,32.5 80,65 80,45.5 0,45.5" class="shape-element" fill="rgb(159, 197, 232)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 240px; height: 280px; left: 640px; top: 297px;">
+                            <div class="sl-block-content fragment" data-shape-type="circle" data-shape-fill-color="rgb(208, 224, 227)" data-shape-stretch="false" style="z-index: 14; opacity: 0.52;" data-fragment-index="3">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 240 240">
+                                    <ellipse rx="120" ry="120" cx="120" cy="120" class="shape-element" fill="rgb(208, 224, 227)"></ellipse>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 640px; top: 389px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="3">
+                                <h1>
+                                        <span style="color:#00FFFF">UI</span>
+                                    </h1>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 80px; top: 372px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="1">
+                                <p>
+                                    <span style="color:#00FFFF">Bindings</span>
+                                </p>
+                                <p>
+                                    <span style="color:#00FFFF">Observers</span>
+                                </p>
+                                <p>
+                                    <span style="color:#00FFFF">Templates</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 70px;">
+                            <div class="sl-block-content" style="z-index: 17; text-align: left;" dir="ui">
+                                <h2>Motivation</h2>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 70px;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;" dir="ui">
+                                <h2>Motivation</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 191px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; text-align: left;" data-fragment-index="0">
+                                <ul>
+                                    <li>Model mutation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">Mutation triggers observers and listeners</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 401px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li style="color: rgb(255, 255, 255); text-align: center;" class="fragment" data-fragment-index="3">
+                                        <span style="color:rgb(238, 238, 238)">Can't use immutable data structures as your model</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 320px; height: 35px; left: 160px; top: 263px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1">
+                                <pre><code>model.set('key', 'mad world');</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 70px;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;" dir="ui">
+                                <h2>Going Functional</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 519px; height: 48px; left: 121px; top: 256px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; font-size: 170%; border-style: solid; border-width: 1px;" data-highlight-theme="github-gist" data-fragment-index="0">
+                                <pre class="none">
+                                        <code>f(state, props) = UI Fragment</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li style="color: rgb(255, 255, 255);" class="fragment" data-fragment-index="1">
+                                        <span style="font-size:0.9em">Well-written components&nbsp;don't even need state</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 519px; height: 46px; left: 121px; top: 397px;">
+                            <div class="sl-block-content fragment" style="z-index: 14; font-size: 170%;" data-highlight-theme="github-gist" data-fragment-index="2">
+                                <pre><code>f(props) = UI Fragment</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 160px; top: 490px;">
+                            <div class="sl-block-content fragment" style="z-index: 15; text-align: left;" data-fragment-index="3">
+                                <p style="color:rgb(255, 255, 255)">
+                                    <span style="font-size:0.9em">Idempotency</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 160px; top: 560px;">
+                            <div class="sl-block-content fragment" style="z-index: 16; text-align: left;" data-fragment-index="4">
+                                <p style="color:rgb(255, 255, 255)">
+                                    <span style="font-size:0.9em">Immutability</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 400px; top: 490px;">
+                            <div class="sl-block-content fragment" style="z-index: 17; text-align: left;" data-fragment-index="5">
+                                <p style="color:rgb(255, 255, 255)">
+                                    <span style="font-size:0.9em">Testability</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 400px; top: 560px;">
+                            <div class="sl-block-content fragment" style="z-index: 18; text-align: left;" data-fragment-index="6">
+                                <p>
+                                    <span style="color:rgb(255, 255, 255)">Bliss</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 70px;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;" dir="ui">
+                                <h2>React has</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 262px; left: 138px; top: 191px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; text-align: left;" data-fragment-index="0">
+                                <p>Controllers</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 32px; height: 32px; left: 80px; top: 195px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0">
+                                <img data-natural-width="64" data-natural-height="64" data-src="./assets/images/deletedred.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 262px; left: 138px; top: 261px;">
+                            <div class="sl-block-content fragment" style="z-index: 14; text-align: left;" data-fragment-index="1">
+                                <p>Directives</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 32px; height: 32px; left: 80px; top: 265px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1">
+                                <img data-natural-width="64" data-natural-height="64" data-src="./assets/images/deletedred.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 262px; left: 138px; top: 331px;">
+                            <div class="sl-block-content fragment" style="z-index: 16; text-align: left;" data-fragment-index="2">
+                                <p>Templates</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 32px; height: 32px; left: 80px; top: 335px;">
+                            <div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="2">
+                                <img data-natural-width="64" data-natural-height="64" data-src="./assets/images/deletedred.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 342px; left: 138px; top: 401px;">
+                            <div class="sl-block-content fragment" style="z-index: 18; text-align: left;" data-fragment-index="3">
+                                <p>Global Event Listeners</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 32px; height: 32px; left: 80px; top: 405px;">
+                            <div class="sl-block-content fragment" style="z-index: 19;" data-fragment-index="3">
+                                <img data-natural-width="64" data-natural-height="64" data-src="./assets/images/deletedred.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 262px; left: 138px; top: 471px;">
+                            <div class="sl-block-content fragment" style="z-index: 20; text-align: left;" data-fragment-index="4">
+                                <p>Models</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 32px; height: 32px; left: 80px; top: 475px;">
+                            <div class="sl-block-content fragment" style="z-index: 21;" data-fragment-index="4">
+                                <img data-natural-width="64" data-natural-height="64" data-src="./assets/images/deletedred.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 262px; left: 138px; top: 541px;">
+                            <div class="sl-block-content fragment" style="z-index: 22; text-align: left;" data-fragment-index="5">
+                                <p>View Models</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 32px; height: 32px; left: 80px; top: 545px;">
+                            <div class="sl-block-content fragment" style="z-index: 23;" data-fragment-index="5">
+                                <img data-natural-width="64" data-natural-height="64" data-src="./assets/images/deletedred.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 600px; top: 278px;">
+                            <div class="sl-block-content fragment" style="z-index: 24;" data-fragment-index="6">
+                                <h3>Just</h3>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 480px; top: 328px;">
+                            <div class="sl-block-content fragment" style="z-index: 25;" data-fragment-index="6">
+                                <h1>
+                                        <span style="color:#40E0D0">Component</span>
+                                    </h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 103px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10; text-align: left;">
+                                <h2>State Less</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 800px; height: 261px; left: 80px; top: 229px;">
+                            <div class="sl-block-content" style="z-index: 0;" data-highlight-theme="solarized-dark">
+                                <pre><code style="margin-left:20px;">import React, { Component } from "react";
+
+        export class HelloWorld extends Component {
+            render() {
+                return ( &lt;h1&gt;Hello, world!&lt;/h1&gt; );
+            }
+        }
+
+
+        React.render(&lt;HelloWorld /&gt;, document.getElementById("myDiv"));
+        </code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 37px; height: 18px; left: 575px; top: 317px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-left" data-shape-fill-color="rgb(255, 217, 102)" data-shape-stretch="false" style="z-index: 11;" href="" data-fragment-index="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 18 18">
+                                    <polygon points="18,5.3999999999999995 9,5.3999999999999995 9,0 0,9 9,18 9,12.6 18,12.6 18,5.3999999999999995" class="shape-element" fill="rgb(255, 217, 102)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 80px; left: 600px; top: 306px;">
+                            <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0">
+                                <p>
+                                    <span style="color:#40E0D0">JSX</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 521px;">
+                            <div class="sl-block-content" style="z-index: 14;">
+                                <ul>
+                                    <li class="fragment" style="text-align:left" data-fragment-index="1">A component implements a render method which returns
+                                        <span style="color:#00FFFF">one single child</span>.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 103px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                                <h2>Stateful</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 720px; height: 456px; left: 80px; top: 192px;">
+                            <div class="sl-block-content" style="z-index: 12; font-size: 70%;" data-highlight-theme="solarized-dark">
+                                <pre class="javascript">
+                                        <code style="padding-left: 30px;">import React, { Component } from 'react';
+
+        export class Timer extends Component {
+          constructor() {
+            super(props);
+
+            this.state = {
+              secondsElapsed: 0
+            }
+          }
+
+          tick() {
+            this.setState({secondsElapsed: this.state.secondsElapsed + 1});
+          }
+
+          componentDidMount() {
+            this.interval = setInterval(this.tick, 1000);
+          }
+
+          componentWillUnmount() {
+            clearInterval(this.interval);
+          }
+
+          render() {
+            return (
+              &lt;div&gt;Seconds Elapsed: {this.state.secondsElapsed}&lt;/div&gt;
+            );
+          }
+        });
+
+        React.render(&lt;Timer /&gt;, mountNode);</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 44px; height: 19px; left: 572px; top: 365px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-left" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 13;" data-fragment-index="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="19,5.7 9.5,5.7 9.5,0 0,9.5 9.5,19 9.5,13.299999999999999 19,13.299999999999999 19,5.7" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 155px; left: 616px; top: 355px;">
+                            <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="0">
+                                <p>
+                                    <span style="color:#00FFFF">Rerender</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 600px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>LifeCycle Methods</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 272px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; letter-spacing: 0.05em; font-size: 97%; text-align: left;" data-has-letter-spacing="" data-fragment-index="0">
+                                <ul>
+                                    <li class="">componentWillMount()</li>
+                                    <li>componentDidMount()</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 210px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0">
+                                <p>MOUNT</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 480px; top: 210px;">
+                            <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1">
+                                <p>UNMOUNT</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 480px; top: 272px;">
+                            <div class="sl-block-content" style="z-index: 15; letter-spacing: 0.05em; font-size: 97%; text-align: left;" data-has-letter-spacing="">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">componentWillUnMount()</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 480px; left: 240px; top: 420px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2">
+                                <p>UPDATE</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 484px;">
+                            <div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="2">
+                                <p>componentWillReceiveProps()</p>
+                                <p>shouldComponentUpdate()</p>
+                                <p>componentWillUpdate()</p>
+                                <p>componentDidUpdate()</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 106px; height: auto;">
+                            <div class="sl-block-content" style="text-align: center; z-index: 11;">
+                                <h2>PROPS</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 200px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 12;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">passed from parent</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 106px; height: auto;">
+                            <div class="sl-block-content fragment" style="text-align: center; z-index: 13;" data-fragment-index="4">
+                                <h2>STATES</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 430px; left: 499px; top: 200px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 14;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="5">created within component</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 379px; height: 41px; left: 80px; top: 280px;">
+                            <div class="sl-block-content fragment" style="z-index: 15; font-size: 150%;" data-fragment-index="1">
+                                <pre><code>&lt;MyComponent foo="bar"&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 410px; left: 49px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;" dir="ui">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="10">this.props
+                                        <span style="font-size:1.0em">
+                                                <span style="text-align:left">→</span>
+                                        </span> read only
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 410px; left: 49px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 17; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">Can set default value</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 410px; left: 49px; top: 490px;">
+                            <div class="sl-block-content" style="z-index: 18; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">Validated&nbsp;
+                                        <span style="color:rgb(255, 255, 255)">→&nbsp;</span>propTypes
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 369px; height: 170px; left: 560px; top: 258px;">
+                            <div class="sl-block-content fragment" style="z-index: 19;" data-fragment-index="6">
+                                <pre><code>// ES5
+        getInitialState: function() {
+            return { foo: 'bar' }
+        }
+
+        // ES6 constructor
+        this.state = { foo: 'bar' }</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 430px; left: 499px; top: 459px;">
+                            <div class="sl-block-content" style="z-index: 20; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="7">Read with `this.state`</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 430px; left: 499px; top: 529px;">
+                            <div class="sl-block-content" style="z-index: 21; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="8">this.setState() to update.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 430px; left: 499px; top: 591px;">
+                            <div class="sl-block-content" style="z-index: 22; text-align: left;">
+                                <ul>
+                                    <li class="fragment" style="text-align:left" data-fragment-index="9">Can become prop</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 537px; left: 80px; top: 87px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                                <h2>Transferring props</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 849px; height: 420px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <pre class="none">
+                                        <code>import React, { Component } from 'react';
+
+        export class FancyCheckbox extends Component {
+          render() {
+            let fancyClass = this.props.checked ? 'FancyChecked' : 'FancyUnchecked';
+
+            return (
+              &lt;div className={fancyClass} onClick={this.props.onClick}&gt;
+                {this.props.children}
+              &lt;/div&gt;
+            );
+          }
+        });
+
+        React.render(
+          &lt;FancyCheckbox checked={true} onClick={console.log.bind(console)}&gt;
+            Hello world!
+          &lt;/FancyCheckbox&gt;,
+          document.getElementById('example')
+        );</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 19px; height: 34px; left: 278px; top: 480px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-down" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 12;" data-fragment-index="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="9.5,19 19,9.5 13.299999999999999,9.5 13.299999999999999,0 5.7,0 5.7,9.5 0,9.5 9.5,19" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 36px; height: 20px; left: 252px; top: 535px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-left" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 14;" data-fragment-index="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 20 20">
+                                    <polygon points="20,6 10,6 10,0 0,10 10,20 10,14 20,14 20,6" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 19px; height: 39px; left: 425px; top: 311px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-up" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="false" style="z-index: 15;" data-fragment-index="3">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="9.5,0 19,9.5 13.299999999999999,9.5 13.299999999999999,19 5.7,19 5.7,9.5 0,9.5 9.5,0" class="shape-element" fill="rgb(255, 255, 0)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 346px; left: 457px; top: 441px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="6">
+                                <p>
+                                    <span style="color:#00FFFF">Props</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 19px; height: 39px; left: 314px; top: 388px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-up" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="false" style="z-index: 17;" data-fragment-index="4">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="9.5,0 19,9.5 13.299999999999999,9.5 13.299999999999999,19 5.7,19 5.7,9.5 0,9.5 9.5,0" class="shape-element" fill="rgb(255, 255, 0)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 19px; height: 39px; left: 646px; top: 369px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-up" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="false" style="z-index: 18;" data-fragment-index="5">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="9.5,0 19,9.5 13.299999999999999,9.5 13.299999999999999,19 5.7,19 5.7,9.5 0,9.5 9.5,0" class="shape-element" fill="rgb(255, 255, 0)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 19px; height: 34px; left: 435px; top: 480px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-down" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 19;" data-fragment-index="1">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="9.5,19 19,9.5 13.299999999999999,9.5 13.299999999999999,0 5.7,0 5.7,9.5 0,9.5 9.5,19" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 537px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Transferring props</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">No need to pass along&nbsp;all props&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 646px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Consume required and pass on remaining</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li style="text-align:start" class="fragment" data-fragment-index="2">
+                                        <em>Use JSX spread operator != ES6 spread operator</em>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 537px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Examples</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 430px; left: 80px; top: 200px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <pre><code>import React, { Component } extends 'react';
+
+        export class FancyCheckbox extends Component {
+          render() {
+            let { checked, ...other } = this.props;
+            let fancyClass = checked ? 'FancyChecked' : 'FancyUnchecked';
+
+            return (
+              &lt;div {...other} className={fancyClass} /&gt;
+            );
+          }
+        }
+
+        React.render(
+          &lt;FancyCheckbox checked={true} onClick={console.log.bind(console)}&gt;
+            Hello world!
+          &lt;/FancyCheckbox&gt;,
+          document.getElementById('example')
+        );</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 48px; height: 21px; left: 512px; top: 286px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-left" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 13;" data-fragment-index="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 21 21">
+                                    <polygon points="21,6.3 10.5,6.3 10.5,0 0,10.5 10.5,21 10.5,14.7 21,14.7 21,6.3" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 124px; left: 556px; top: 273px;">
+                            <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="0">
+                                <p>
+                                    <span style="font-size:0.5em">
+                                            <span style="color:#00FFFF">DESTRUCTURING</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 15px; height: 20px; left: 313px; top: 322px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-up" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 15;" data-fragment-index="1">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 15 15">
+                                    <polygon points="7.5,0 15,7.5 10.5,7.5 10.5,15 4.5,15 4.5,7.5 0,7.5 7.5,0" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 91.5px; left: 274px; top: 323px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="1">
+                                <p>
+                                    <span style="color:#00FFFF">
+                                            <span style="font-size:15px">CONSUMED</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 600px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Props order matters</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 880px; height: 420px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <pre><code>// code..
+
+        render() {
+          var { checked, title, ...other } = this.props;
+          var fancyClass = checked ? 'FancyChecked' : 'FancyUnchecked';
+          var fancyTitle = checked ? 'X ' + title : 'O ' + title;
+
+          return (
+            &lt;label&gt;
+              &lt;input {...other}
+                checked={checked}
+                className={fancyClass}
+                type="checkbox" // no matter what `other` is type will always be checkbox.
+              /&gt;
+              {fancyTitle}
+            &lt;/label&gt;
+          );
+        }
+
+        // code..</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 600px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                                <h2>Props Validation</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 430px; left: 80px; top: 200px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <pre><code>export class Counter extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {count: props.initialCount};
+          }
+          tick() {
+            this.setState({count: this.state.count + 1});
+          }
+          render() {
+            return (
+              &lt;div onClick={this.tick.bind(this)}&gt;
+                Clicks: {this.state.count}
+              &lt;/div&gt;
+            );
+          }
+        }
+
+        Counter.propTypes = { initialCount: React.PropTypes.number };</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 19px; height: 34px; left: 529px; top: 508px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-down" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 13;" data-fragment-index="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 19 19">
+                                    <polygon points="9.5,19 19,9.5 13.299999999999999,9.5 13.299999999999999,0 5.7,0 5.7,9.5 0,9.5 9.5,19" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 600px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>propTypes</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 80px; top: 172px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; letter-spacing: 0.05em; font-size: 97%; text-align: left;" data-has-letter-spacing="" data-fragment-index="0">
+                                <ul>
+                                    <li>
+                                        <span style="font-size:1.0em">array</span>
+                                    </li>
+                                    <li>
+                                        <span style="font-size:1.0em">bool</span>
+                                    </li>
+                                    <li>
+                                        <span style="font-size:1.0em">func</span>
+                                    </li>
+                                    <li class="visible">
+                                        <span style="font-size:1.0em">number</span>
+                                    </li>
+                                    <li>
+                                        <span style="font-size:1.0em">object</span>
+                                    </li>
+                                    <li>
+                                        <span style="font-size:1.0em">string</span>
+                                    </li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">
+                                        <span>instanceOf</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 400px; top: 172px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1">
+                                <ul>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">
+                                        <span>oneOf</span>
+                                    </li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">
+                                        <span>oneOfType</span>
+                                    </li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">arrayOf</li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">any</li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">
+                                        <span>
+                                                <span style="color:rgb(0, 255, 255)">node</span>
+                                        </span>
+                                    </li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">
+                                        <span>
+                                                <span style="color:rgb(0, 255, 255)">element</span>
+                                        </span>
+                                    </li>
+                                    <li style="color:rgb(255, 255, 255); font-size:29.1px">
+                                        <span style="color:rgb(0, 255, 255)">shape</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 720px; top: 302px;">
+                            <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="2">
+                                <p>isRequired</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 541px;">
+                            <div class="sl-block-content fragment" style="z-index: 15; text-align: left;" data-fragment-index="3">
+                                <p>
+                                    <span style="color:#FF8C00">* Use only in Development</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 600px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>States</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Components are just state machines</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 850px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;" dir="ui">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Update the state and render new UI based on that state</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 832px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">Take data from props and render it</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 850px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">
+                                        <span style="font-size:1.0em">Components should be&nbsp;
+                                                <span style="color:rgb(255, 255, 255)">stateless&nbsp;</span>as much as possible.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 490px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">Create several stateless component and stateful component on top of that.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 106px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>
+                                        <span style="font-size:0.7em">Should have</span>
+                                    </h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 202px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 12;">
+                                <ul style="color:rgb(255, 255, 255)">
+                                    <li class="fragment" data-fragment-index="0">Minimal possible representation of data which triggers UI update</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 106px; height: auto;">
+                            <div class="sl-block-content fragment" style="text-align: left; z-index: 13;" data-fragment-index="2">
+                                <h2>
+                                        <span style="font-size:0.7em">Should not have</span>
+                                    </h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 200px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 14;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">computed data</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 410px; left: 49px; top: 381px;">
+                            <div class="sl-block-content" style="z-index: 15;">
+                                <ul style="color:rgb(255, 255, 255)">
+                                    <li class="fragment" data-fragment-index="1">Data that can be computed later</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 410px; left: 499px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">React Components</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 435px; left: 499px; top: 364px;">
+                            <div class="sl-block-content" style="z-index: 17; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="5">duplicated data from props</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Multiple Components</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 850px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;" dir="ui">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Composability
+                                        <span style="font-size:1.0em">→</span> finest feature of react.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Using Components as (pure) functions or classes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">separation of concerns</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">Owner Ownee relationship in React</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 490px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">Parent Child relationship in DOM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
+                            <div class="sl-block-content">
+                                <h1>DEMO TIME</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h3>
+                                        <span style="font-size:1.0em">Separation of Components</span>
+                                    </h3>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">composable</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">resuable</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">maintainable</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">testable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Non DOM attributes</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">key
+                                        <span style="color:rgb(255, 255, 255)">→&nbsp;</span>keep component alive
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">ref&nbsp;
+                                        <span style="color:rgb(255, 255, 255)">→ access dom node</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">
+                                        <span style="text-align:left">dangerouslySetInnerHTML</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 113px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h1>Virtual DOM</h1>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 314px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; text-align: center;" data-fragment-index="0">
+                                <p>
+                                    <span style="color:#40E0D0">Motivation</span>
+                                </p>
+                                <p>Modification in real DOM tree evil</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 270px; left: 345px; top: 431px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">it's incosistent</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 270px; left: 345px; top: 482px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">it's hard to test.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 270px; left: 345px; top: 532px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">it's brittle</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 270px; left: 345px; top: 580px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">it's expensive</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 106px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Virtual DOM</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 831px; left: 49px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Consists of light weight Javascript Objects for DOM tree</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 831px; left: 49px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Virtual DOM makes rerendering fast on every change</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 831px; left: 49px; top: 490px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">Batched read and write for optimal performence</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 831px; left: 49px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 15;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">When
+                                        <span style="color:#40E0D0">state</span> changes
+                                        <span style="color:#40E0D0">Virtual</span> and
+                                        <span style="color:#40E0D0">Real DOM </span>trees are compared and
+                                        <span style="color:#40E0D0">real DOM</span> tree modified only where it's required.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 49px; top: 560px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">Virtual DOM != Shadow DOM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 560px; left: 80px; top: 83px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                                <h2>Example: In&nbsp;JSX</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 433px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 0; font-size: 86%;">
+                                <pre><code>import React, { Component } from 'react';
+
+        export class Button extends Component {
+
+            constructor(props) {
+                super(props);
+
+                this.state = { liked: false };
+            }
+
+            _handleClick() {
+                this.setState({liked: !this.state.liked})
+            }
+
+            render() {
+                let text = this.state.liked ? 'like' : 'unlike';
+
+                return (
+                    &lt;p onClick={() =&gt; this._onClick()}&gt;
+                        You {text} this. Click to Toggle.
+                    &lt;/p&gt;
+                );
+
+            }
+        }</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 474px; height: 168px; left: 113px; top: 436px;">
+                            <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11; opacity: 0.21;">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 474 168">
+                                    <rect width="474" height="168" class="shape-element" fill="rgb(255, 255, 255)"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 880px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                                <h2>Compiled to JS</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 444px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; font-size: 87%;">
+                                <pre><code>import React, { Component } from 'react';
+
+        export class Button extends Component {
+
+            constructor(props) {
+                super(props);
+
+                this.state = { liked: false };
+                this. _handleClick = this._handleClick.bind(this);
+            }
+
+            _handleClick() {
+                this.setState({liked: !this.state.liked})
+            }
+
+            render() {
+                let text = this.state.liked ? 'like' : 'unlike';
+
+                return (
+                    React.DOM.p({ onClick: this._handleClick },
+                        'You ', text, 'this. Click to Toggle'
+                    )
+                );
+
+            }
+        }</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 527px; height: 170px; left: 113px; top: 451px;">
+                            <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 13; opacity: 0.21;">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 527 170">
+                                    <rect width="527" height="170" class="shape-element" fill="rgb(255, 255, 255)"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>React.render</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 880px; height: 105px; left: 80px; top: 200px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <pre><code>// REACT API
+        // returns a reference to the Component
+        // callback gets called after rendering.
+        ReactComponent render(ReactElement element, DOMElement container, [function callback]);
+        </code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Render&nbsp;a
+                                        <span style="color:#00FFFF">ReactElement</span> into the supplied container.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 401px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">If ReactElement exists perform update and mutate</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 471px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">Does not modify the container node (only children)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 541px;">
+                            <div class="sl-block-content" style="z-index: 17;">
+                                <ul>
+                                    <li style="text-align: left;" class="fragment" data-fragment-index="3">It is possible to insert a component to existing DOM without overwriting the existing children</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Problem</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 191px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li>Transform one DOM tree to another&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 261px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li style="text-align: left;">well studied and solution is o(n3)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li>1000 DOM elements ~ 1000000000 comparisons</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 401px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li>Sure you want to do this?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>React's O(n) Solution</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 191px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <p>
+                                    <span style="color:#00FFFF">Based on two assumptions</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 261px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Two components
+                                        <br/> with same class generates same tree
+                                        <br/> with different classes&nbsp;generate different trees
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 15;">
+                                <ul style="color: rgb(255, 255, 255);">
+                                    <li class="fragment" data-fragment-index="1">Its is possible provide unique keys to stable component</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 484.2px; height: 269px; left: 0px; top: 227px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <img data-natural-width="1062" data-natural-height="590" data-src="./assets/images/react_diff.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 438.307px; height: 269px; left: 512px; top: 227px;">
+                            <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0">
+                                <img data-natural-width="1020" data-natural-height="626" data-src="./assets/images/sub_tree.png" />
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 121px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <h2>Pairwise Diff</h2>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Pairwise Diff</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ol>
+                                    <li class="fragment" data-fragment-index="0">Different Node Types</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 275px;">
+                            <div class="sl-block-content" style="z-index: 14;">
+                                <ul>
+                                    <li class="fragment" style="text-align:left" data-fragment-index="0">if two nodes or components are of different types throw away first one and build/insert second one.&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 91px; left: 80px; top: 409px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1">
+                                <pre><code>renderA: &lt;div /&gt;
+        renderB: &lt;span /&gt;
+        =&gt; [removeNode &lt;div /&gt;], [insertNode &lt;span /&gt;]</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 80px; left: 80px; top: 524px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2">
+                                <pre><code>renderA: &lt;Header /&gt; // Component
+        renderB: &lt;Content /&gt; // component
+        =&gt; [removeNode &lt;Header /&gt;], [insertNode &lt;Content /&gt;]</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Pairwise Diff</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <p class="fragment" data-fragment-index="0">2. Different DOM Nodes</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 275px;">
+                            <div class="sl-block-content" style="z-index: 14;">
+                                <ul>
+                                    <li class="fragment" style="text-align:left" data-fragment-index="1">Look at the attributes of both and can decide which of them changed in linear time</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 800px; height: 91px; left: 80px; top: 363px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1">
+                                <pre><code>renderA: &lt;div id="before" /&gt;
+        renderB: &lt;div id="after" /&gt;
+        =&gt; [replaceAttribute id "after"]</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 800px; height: 80px; left: 80px; top: 524px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2">
+                                <pre><code>renderA: &lt;div style={{color: 'red'}} /&gt;
+        renderB: &lt;div style={{fontWeight: 'bold'}} /&gt;
+        =&gt; [removeStyle color], [addStyle font-weight 'bold']</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 475px;">
+                            <div class="sl-block-content" style="z-index: 17; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">Treat style as&nbsp;key-value object instead - React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Pairwise Diff</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <p class="fragment" data-fragment-index="0">2. Same Custom Components</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 880px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left" class="fragment" data-fragment-index="2">Takes all attributes from new component</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">
+                                        <span style="color:rgb(255, 255, 255); text-align:left">and calls&nbsp;component[Will/Did]ReceiveProps() on the previous&nbsp;one.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Components are stateful &nbsp;so can't throw old component.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Listwise Diff</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li>In case two ReactFragment go over both lists of children at the same time and generate mutation whenever there's difference.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 98px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 13;">
+                                <pre><code>// No mutation required.
+        renderA: &lt;div&gt;&lt;span&gt;first&lt;/span&gt;&lt;/div&gt;
+        renderB: &lt;div&gt;&lt;span&gt;first&lt;/span&gt;&lt;span&gt;second&lt;/span&gt;&lt;/div&gt;
+        =&gt; [insertNode &lt;span&gt;second&lt;/span&gt;]</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 104px; left: 80px; top: 490px;">
+                            <div class="sl-block-content" style="z-index: 14;">
+                                <pre><code>// mutation required.
+        renderA: &lt;div&gt;&lt;span&gt;first&lt;/span&gt;&lt;/div&gt;
+        renderB: &lt;div&gt;&lt;span&gt;second&lt;/span&gt;&lt;span&gt;first&lt;/span&gt;&lt;/div&gt;
+        =&gt; [replaceAttribute textContent 'second'], [insertNode &lt;span&gt;first&lt;/span&gt;]</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 611px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li style="text-align: left;">This is o(n2);</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Listwise Diff</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Add additional attribute `key`.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 98px; left: 80px; top: 420px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="3">
+                                <pre><code>renderA: &lt;div&gt;&lt;span key="first"&gt;first&lt;/span&gt;&lt;/div&gt;
+        renderB: &lt;div&gt;&lt;span key="second"&gt;second&lt;/span&gt;&lt;span key="first"&gt;first&lt;/span&gt;&lt;/div&gt;
+        =&gt; [insertNode &lt;span&gt;second&lt;/span&gt;]</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 560px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left" class="fragment" data-fragment-index="4">key only has to be unique among its siblings, not globally.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">React is now able to perform all tasks in O(n) with has table.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li style="text-align: left;" class="fragment" data-fragment-index="0">React is O(n). How?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Terminology</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li>ReactElement</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li>ReactNode</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li>ReactComponent</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li style="text-align: left;">ReactElement Factory</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 490px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li>ReactComponent Class</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>ReactElement</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Primary type in react</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">
+                                        <span style="color:#00FFFF">type</span>,
+                                        <span style="color:#00FFFF">props</span>,
+                                        <span style="color:#00FFFF">key</span> and
+                                        <span style="color:#00FFFF">ref</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 560px; left: 80px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">No methods, nothing in prototype</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 640px; height: 71px; left: 80px; top: 490px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="4">
+                                <pre><code style="padding:20px;">var root = React.createElement('div');</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 640px; height: 75px; left: 80px; top: 561px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="5">
+                                <pre><code style="padding:20px;">React.render(root, document.getElementById('example'));</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 80px; top: 420px;">
+                            <div class="sl-block-content fragment" style="z-index: 17; text-align: left;" data-fragment-index="3">
+                                <ul>
+                                    <li>Light, stateless, immutable, virtual DOM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>ReactElement</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 99px; left: 80px; top: 273px;">
+                            <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0">
+                                <pre><code>let root = &lt;ul className="my-list"&gt;
+                     &lt;li&gt;Text Content&lt;/li&gt;
+                   &lt;/ul&gt;;
+        React.render(root, document.getElementById('example'));</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 720px; height: 140px; left: 80px; top: 474px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1">
+                                <pre><code>var child = React.createElement('li', null, 'Text Content');
+
+        var root = React.createElement('ul', { className: 'my-list' }, child);
+
+        React.render(root, document.getElementById('example'));</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 210px;">
+                            <div class="sl-block-content fragment" style="z-index: 14; text-align: left;" data-fragment-index="0">
+                                <ul>
+                                    <li>JSX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 404px;">
+                            <div class="sl-block-content fragment" style="z-index: 15; text-align: left;" data-fragment-index="1">
+                                <ul>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 16px; height: 31px; left: 470px; top: 443px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-down" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 16;" data-fragment-index="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 16 16">
+                                    <polygon points="8,16 16,8 11.2,8 11.2,0 4.8,0 4.8,8 0,8 8,16" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 160px; left: 400px; top: 404px;">
+                            <div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="2">
+                                <p>properties</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 16px; height: 31px; left: 618px; top: 443px;">
+                            <div class="sl-block-content fragment" data-shape-type="arrow-down" data-shape-fill-color="rgb(0, 255, 255)" data-shape-stretch="false" style="z-index: 18;" data-fragment-index="3">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 16 16">
+                                    <polygon points="8,16 16,8 11.2,8 11.2,0 4.8,0 4.8,8 0,8 8,16" class="shape-element" fill="rgb(0, 255, 255)"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 126px; left: 577px; top: 404px;">
+                            <div class="sl-block-content fragment" style="z-index: 19;" data-fragment-index="3">
+                                <p>Children</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>ReactNodes</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 341px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">ReactElement</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 411px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="3">string ( aka ReactText )</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 481px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">number ( aka ReactText )</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 80px; top: 551px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="5">Array of reactNodes ( aka ReactFragment )</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 191px;">
+                            <div class="sl-block-content fragment" style="z-index: 16; text-align: left;" data-fragment-index="0">
+                                <p style="text-align:left">Used as properties of ReactElements to represent children</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 560px; left: 80px; top: 280px;">
+                            <div class="sl-block-content fragment" style="z-index: 17; text-align: left;" data-fragment-index="1">
+                                <p>Can be either:</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>React Components</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li style="text-align: left;" class="fragment" data-fragment-index="0">A simple JavaScript class</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 157px; left: 80px; top: 280px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0">
+                                <pre><code>import React, { Component } from 'react';
+
+        export class MyComponent extends Component{
+          render() {
+            ...
+          }
+        };</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 38px; left: 80px; top: 522px;">
+                            <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1">
+                                <pre><code>let component = new MyComponent(props); // never do this</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 44px; left: 80px; top: 560px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="2">
+                                <pre><code>let element = React.createElement(MyComponent); // use this
+        </code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 41px; left: 80px; top: 604px;">
+                            <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2">
+                                <pre><code>var element = &lt;MyComponent /&gt;; // using JSX</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 471px;">
+                            <div class="sl-block-content" style="z-index: 17; text-align: left;" dir="ui">
+                                <ul>
+                                    <li class="fragment" style="text-align:left" data-fragment-index="3">Create ReactElement from ReactClass</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Create Component</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 35px; left: 80px; top: 263px;">
+                            <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0">
+                                <pre><code>var component = React.render(element, document.getElementById('example'));</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 100px; left: 80px; top: 390px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1">
+                                <pre><code>let componentA = React.render(&lt;MyComponent /&gt;, document.getElementById('example'));
+        let componentB = React.render(&lt;MyComponent /&gt;, document.getElementById('example'));
+
+        componentA === componentB; // true</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 191px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left" class="fragment" data-fragment-index="0">Create ReactComponent from Element</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 541px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;" dir="ui">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">ReactClass
+                                        <span style="color:rgb(255, 255, 255); text-align:left">→</span>&nbsp;ReactElement
+                                        <span style="color:rgb(255, 255, 255); text-align:left">→</span>&nbsp;ReactComponent
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">Same ReactElement and DOM Element&nbsp;
+                                        <span style="color:rgb(255, 255, 255); text-align:left">→ same reference</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 81px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Factory</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 191px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li>A function use to generate a ReactElement given a
+                                        <span style="color:#00FFFF">type</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 640px; height: 79px; left: 160px; top: 271px;">
+                            <div class="sl-block-content" style="z-index: 13;">
+                                <pre><code>function createFactory(type) {
+          return React.createElement.bind(null, type);
+        }</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 401px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li>Allow you to create shorthand</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 640px; height: 85px; left: 160px; top: 475px;">
+                            <div class="sl-block-content" style="z-index: 15;">
+                                <pre><code>let div = React.createFactory('div');
+        let root = div({ className: 'my-div' });
+        React.render(root, document.getElementById('example'));</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 113px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10; text-align: center;">
+                                <h1>Flux</h1>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 280px;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                                <p>ReactJS is a JavaScript library for building UI</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 420px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <p>Flux is application architecture for building UI</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 560px; top: 350px;">
+                            <div class="sl-block-content" style="z-index: 13;">
+                                <p>- Wikipedia</p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 560px; top: 471px;">
+                            <div class="sl-block-content" style="z-index: 15;">
+                                <p>- Flux website</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                                <h2>Traditional data flows</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 80px; top: 204px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; text-align: left; font-size: 90%;" data-fragment-index="0">
+                                <p>
+                                    <span style="color:#40E0D0">NO Framework</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 120px; top: 257px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left; font-size: 90%;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Any component can communicate with any other component</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 80px; top: 344px;">
+                            <div class="sl-block-content fragment" style="z-index: 14; text-align: left; font-size: 90%;" data-fragment-index="1">
+                                <p>
+                                    <span style="color:#00FFFF">Backbone: Pub - Sub</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 480px; height: 37px; left: 120px; top: 396px;">
+                            <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1">
+                                <pre><code>model.on('change:name', function() { ... })</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 465px;">
+                            <div class="sl-block-content fragment" style="z-index: 16; text-align: left; font-size: 90%;" data-fragment-index="2">
+                                <p>
+                                    <span style="color:#00FFFF">Angular: 2-way data binding and $digest loop</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 480px; height: 37px; left: 120px; top: 536px;">
+                            <div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="2">
+                                <pre><code>$scope.name = ...</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 597px;">
+                            <div class="sl-block-content fragment" style="z-index: 18;" data-fragment-index="3">
+                                <p style="text-align:left">
+                                    <span style="color:#00FFFF">React: 1-way data flow</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10; text-align: left;">
+                                <h2>Flux</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 191px;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                                <ul>
+                                    <li style="text-align: left;">Data flows in single direction&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left">
+                                        <span style="color:#00FF00">
+                                                <strong>Dispatcher</strong>
+                                            </span>: Hub to manage all data flow
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 80px; top: 401px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left">
+                                        <strong>
+                                                <span style="color:#00FF00">Stores</span>
+                                            </strong>: Contains application state and logic&nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 467px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li>
+                                        <span style="color:#00FF00">
+                                                <strong>Views</strong>
+                                            </span>: Representation of state within stores, listen to stores from depend stores
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 261px;">
+                            <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                                <ul>
+                                    <li>
+                                        <span style="color:#00FF00">
+                                                <strong>Actions</strong>
+                                            </span>: Dispatcher helper methods
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960.311px; height: 523px; left: -0.155367px; top: 89px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <img data-natural-width="1300" data-natural-height="708" data-src="./assets/images/flux_diagram.png" />
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                                <h2>Remember?</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 80px; top: 191px;">
+                            <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left">Props are immutable.&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 80px; top: 261px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left">States are mutable</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 700px; left: 80px; top: 401px;">
+                            <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                                <ul>
+                                    <li style="text-align:left">Store states on topmost component</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                                <ul>
+                                    <li>State can become Props.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                                <h2>Store,&nbsp;Actions And&nbsp;Views&nbsp;</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 500px; height: 500px; left: 150px; top: 151px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <img data-natural-width="400" data-natural-height="400" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/358552/images/1778332/show_me_code.jpg" />
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 270px; height: auto;">
+                            <div class="sl-block-content fragment" style="z-index: 10;" data-fragment-index="0">
+                                <h1>
+                                        <span style="color:#00FFFF">Red</span>ucer + Fl
+                                        <span style="color:#00FFFF">ux</span>
+                                    </h1>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 420px;">
+                            <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0">
+                                <p>By&nbsp;
+                                    <a href="https://github.com/gaearon" target="_blank">
+                                        <span style="color:#00FFFF">@gaearon</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 183px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 13;">
+                                <h1>
+                                        <span style="color:#00FFFF">Red</span>
+                                        <span style="color:#00FFFF">ux</span>
+                                    </h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 412px; left: 80px; top: 43px; height: auto;">
+                            <div class="sl-block-content" style="font-size: 61%; text-align: left; z-index: 10;">
+                                <h1>Motivation</h1>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 764.985px; height: 490px; left: 80px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <img data-natural-width="1046" data-natural-height="670" data-src="./assets/images/mario.png" />
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 294px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <p>
+                                    <a href="http://debug.elm-lang.org/" target="_blank">[ ELM Time Traveling&nbsp;Debugger ]</a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 605px; left: 49px; top: 106px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                                <h2>Redux Principles</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 210px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Single source of truth</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 80px; top: 381px;">
+                            <div class="sl-block-content fragment" style="z-index: 12; text-align: left;" data-fragment-index="1">
+                                <ul>
+                                    <li>State is read-only</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 80px; top: 541px;">
+                            <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="2">Mutations are written as pure functions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 160px; top: 280px;">
+                            <div class="sl-block-content fragment" style="z-index: 14; font-size: 80%;" data-fragment-index="0">
+                                <p style="text-align:left">The
+                                    <span style="color:#00FFFF">state</span> of your whole application is stored in an object tree inside a single
+                                    <span style="color:#00FFFF">store</span>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 160px; top: 447px;">
+                            <div class="sl-block-content fragment" style="z-index: 15; font-size: 80%;" data-fragment-index="1">
+                                <p style="text-align:left">The only way to mutate the state is to emit an
+                                    <span style="color:#00FFFF">action</span> ( an object describing what happened )
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 160px; top: 599px;">
+                            <div class="sl-block-content fragment" style="z-index: 17; font-size: 80%;" dir="ui" data-fragment-index="2">
+                                <p style="text-align:left">To specify how the state tree is transformed by actions, write pure
+                                    <span style="color:#00FFFF">reducers</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 49px; top: 106px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                                <h2>Store Before</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 106px; height: auto;">
+                            <div class="sl-block-content" style="text-align: left; z-index: 11;">
+                                <h2>Store After</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 431px; height: 350px; left: 49px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 12; font-size: 90%;">
+                                <pre><code>_recipes = [];
+
+        function addRecipes(recipe){
+            _recipes.push(recipe);
+        }
+
+        let RecipeStore = Flux.createStore({
+               getRecipes: function(){
+               return _recipes;
+            }
+        }, function(payload){
+            if(payload.actionType === "ADD_RECIPE") {
+                addRecipes(payload.text);
+                RecipeStore.emitChange();
+            }
+        });</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 410px; height: 350px; left: 499px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 14; font-size: 75%;">
+                                <pre><code>function recipes(initialRecipes = [], action) {
+            switch (action.type) {
+                case 'ADD_RECIPE':
+                    return [..initialRecipes]
+            }
+        }
+
+        import { combineReducers, createStore } from 'redux';
+        let reducer = combineReducers({ recipes });
+        let store = createStore(reducer);
+        // store.getState() will return app state
+
+        // actions
+        store.dispatch({
+          type: 'ADD_RECIEPE',
+          text: 'xyz'
+        });
+
+        // use connect() to receive a dispatch function
+        // as a prop,and any state it needs from the
+        // global state. </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/reveal.js"></script>
+    <script>
+    Reveal.initialize({
+        history: true,
+        center: false
+    });
+    </script>
+</body>
+
+</html>

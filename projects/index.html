@@ -1,0 +1,43 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<div class="projects">
+  <div class="projects_heading">Personal Projects</div>
+  <article class="project-list">
+    {% for project in site.projects %}
+    <article class="project">
+      <div class="project_title-bar" data-text="{{ project.name }}">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <a href={{project.link}}>
+        <div class="project_thumb" style="background-image: url({{site.url}}/{{project.image}})"></div>
+      </a>
+    </article>
+    {% endfor %}
+  </article>
+
+  <div class="projects_heading">Open Source</div>
+  <div class="project-list">
+    {% for project in site.opensource %}
+    <article class="project">
+      <div class="project_title-bar" data-text="{{ project.name }}">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <a href={{project.link}}>
+        <div class="project_thumb" style="background-image: url({{site.url}}/{{project.image}})"></div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="projects_heading">
+    <a class="projects_more-link" href="https://github.com/bitshadow">Looking for more?</a>
+  </div>
+</div>
