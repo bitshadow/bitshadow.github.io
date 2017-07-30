@@ -43,14 +43,14 @@ projects:
   link: ./slate
   desc: A text only meme generator
   image: images/projects/slate.png
+- name: React JS
+  link: ./react # https://facebook.github.io/react/acknowledgements.html
+  image: images/projects/react.png
+  desc: Fixing bugs in React.js
 - name: Scrollpad
   link: https://github.com/bitshadow/ScrollPad
   desc: Scroll long webpages easy way.
   image: images/projects/scrollpad.png
-- name: Patch Viewer
-  link: https://github.com/bitshadow/PatchViewer
-  desc: Elegant diff displays in Linux terminals
-  image: images/projects/patchviewer.png
 
 opensource:
 - name: Mozilla Firefox
@@ -65,7 +65,7 @@ opensource:
   link: https://cgit.kde.org/kdelibs.git/log/?h=Active%2FTwo&id=1fd3f0ff63e31309fab5c70db0fe6669a918f234&qt=author&q=jignesh #https://cgit.kde.org/calligra.git/commit/?id=44bf28f8aec3ab6071ec3c08e3dd80a70fa90d78
   image: images/projects/kde.png
   desc: Porting KDE frameworks from Qt4 to Qt5
-- name: React JS
-  link: ./react # https://facebook.github.io/react/acknowledgements.html
-  image: images/projects/react.png
-  desc: Fixing bugs in React.js
+- name: Patch Viewer
+  link: https://github.com/bitshadow/PatchViewer
+  desc: Elegant diff displays in Linux terminals
+  image: images/projects/patchviewer.png
