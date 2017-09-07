@@ -44,7 +44,7 @@ projects:
   desc: A text only meme generator
   image: images/projects/slate.png
 - name: React JS
-  link: ./react # https://facebook.github.io/react/acknowledgements.html
+  link: http://slides.com/jigneshkakadiya/deck#/ # https://facebook.github.io/react/acknowledgements.html
   image: images/projects/react.png
   desc: Fixing bugs in React.js
 - name: Scrollpad
